@@ -6,7 +6,7 @@ export default function Gallarey(){
 
     const pics = [
         {
-            imo: new URL('src/ASSETS/b1.jpeg', import.meta.url).href,
+            imo: new URL('https://unsplash.com/photos/close-up-of-african-saleswoman-in-eyeglasses-taking-picture-of-decorations-and-glass-in-shop-on-modern-smartphone-creating-online-catalogue-using-wireless-laptop-Pl2IzKti28I', import.meta.url).href,
             name: "Maria"
         },
         /* {
