@@ -6,10 +6,10 @@ export default function Gallarey(){
 
     const pics = [
         {
-            url: 'src/ASSETS/b1.jpeg',
+            imo: new URL('src/ASSETS/b1.jpeg', import.meta.url).href,
             name: "Maria"
         },
-        {
+        /* {
             url: "src/ASSETS/b2.jpeg",
             name: "Joan"
         },
@@ -67,13 +67,13 @@ export default function Gallarey(){
         {
             url: "src/ASSETS/b16.jpeg",
             name: "Nakimuli"
-        },
+        }, */
        
     ];
 
     const photos = pics.map((pic,i) => (
         <div className="pic--container" key={i}>
-            <img src={pic.url} alt="picture" className="image"/>
+            <img src={pic.imo} alt="picture" className="image"/>
             <span className="name">{pic.name}</span>
         </div>
     ))
