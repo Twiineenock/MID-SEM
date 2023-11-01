@@ -1,0 +1,32 @@
+.section {
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+    align-content: center;
+    margin: 15px;
+    width: 45%;
+    padding: 70px;
+    background-color: rgb(217, 221, 229);
+    border-radius: 6px;
+    font-family: sans-serif;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contact--container {
+    width: fit-content;
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+}
+
+.title {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.content {
+    padding: 10px;
+    border-radius: 4px;
+    color: rgb(0, 0, 34);
+    background-color: white;
+}
