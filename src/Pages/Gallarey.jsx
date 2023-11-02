@@ -4,9 +4,10 @@ import '../CSS/gallery.css';
 
 export default function Gallarey(){
     //https://github.com/Twiineenock/MID-SEM/blob/master/public/ASSETS/b10.jpeg
+    //https://ibb.co/0Q04vyP
     const pics = [
         {
-            imo: 'https://github.com/Twiineenock/MID-SEM/blob/master/public/ASSETS/b10.jpeg',
+            imo: 'https://ibb.co/0Q04vyP',
             name: "Maria"
         },
         /* {
