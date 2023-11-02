@@ -6,7 +6,7 @@ export default function Gallarey(){
 
     const pics = [
         {
-            imo: 'https://unsplash.com/photos/heart-rhinestone-at-woman-cheek-BzSfM6n_LIE',
+            imo: 'public/ASSETS/b1.jpeg',
             name: "Maria"
         },
         /* {
