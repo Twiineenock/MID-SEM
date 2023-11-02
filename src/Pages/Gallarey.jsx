@@ -6,7 +6,7 @@ export default function Gallarey(){
 
     const pics = [
         {
-            imo: 'public/ASSETS/b1.jpeg',
+            imo: '../../public/ASSETS/b1.jpeg',
             name: "Maria"
         },
         /* {
