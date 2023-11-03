@@ -4,57 +4,77 @@ import '../CSS/gallery.css';
 
 export default function Gallarey(){
     
-    // State variable to store the photo URLs
-  const [images, setImages] = useState(['https://www.pexels.com/photo/tall-majestic-palm-trees-on-green-hills-6590699/']);
-
-  useEffect(() => {
-    // Set your Pexels API key
-    const apiKey = "IiUcPbW7SjqI2DBKlzBQ4el3OjfitzmR5ES1cPB46kfrjYZkLbQ01EE7";
-
-    // Define the API endpoint for searching photos
-    const apiUrl = "https://api.pexels.com/v1/search";
-
-    // Define your query parameters
-    const query = "nature";
-    const perPage = 20;
-
-    // Create a URL with query parameters
-    const url = new URL(apiUrl);
-    url.searchParams.append("query", query);
-    url.searchParams.append("per_page", perPage);
-
-    // Make the GET request to the Pexels API using the Fetch API
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        'Authorization': apiKey
-      }
-    })
-      .then(response => {
-        if (response.status === 200) {
-          return response.json();
-        } else {
-          throw new Error(`Error: Unable to fetch photos. Status code: ${response.status}`);
-        }
-      })
-      .then(data => {
-        //console.log(data);
-        // Extract photo URLs and store them in the 'images' state
-        const photoUrls = data.photos.map(photo => photo.url);
-        //console.log(photoUrls);
-        setImages(photoUrls);
-        
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, []); // The empty dependency array ensures this effect runs once when the component mounts
-  console.log(images);
+    const pics = [
+        {
+            url: "https://images.pexels.com/photos/952630/pexels-photo-952630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            name: "Maria"
+        },
+        /* {
+            url: "src/ASSETS/b2.jpeg",
+            name: "Joan"
+        },
+        {
+            url: "src/ASSETS/b3.jpeg",
+            name: "Jane"
+        },
+        {
+            url: "src/ASSETS/b4.jpeg",
+            name: "Jennifer"
+        },
+        {
+            url: "src/ASSETS/b5.jpeg",
+            name: "Janet"
+        },{
+            url: "src/ASSETS/b6.jpeg",
+            name: "John"
+        },
+        {
+            url: "src/ASSETS/b7.jpeg",
+            name: "James"
+        },
+        {
+            url: "src/ASSETS/b8.jpeg",
+            name: "Judas"
+        },
+        {
+            url: "src/ASSETS/b9.jpeg",
+            name: "Job"
+        },
+        {
+            url: "src/ASSETS/b10.jpeg",
+            name: "Jacob"
+        },
+        {
+            url: "src/ASSETS/b11.jpeg",
+            name: "Justice"
+        },
+        {
+            url: "src/ASSETS/b12.jpeg",
+            name: "Love"
+        },
+        {
+            url: "src/ASSETS/b13.jpeg",
+            name: "Blessing"
+        },
+        {
+            url: "src/ASSETS/b14.jpeg",
+            name: "Judge"
+        },
+        {
+            url: "src/ASSETS/b15.jpeg",
+            name: "Kirabo"
+        },
+        {
+            url: "src/ASSETS/b16.jpeg",
+            name: "Nakimuli"
+        }, */
+       
+    ];
     
 
-    const photos = images.map((imageUrl,i) => (
+    const photos = pics.map((pic,i) => (
         <div className="pic--container" key={i}>
-            <img src='https://images.pexels.com/photos/6590699/pexels-photo-6590699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className="image"/>          
+            <img src={pic.url} className="image"/>          
         </div>
     ))
 
